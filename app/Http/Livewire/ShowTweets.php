@@ -3,11 +3,15 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Models\Tweet;
 
 class ShowTweets extends Component
 {
+    public $message = 'Apenas um teste';
+
     public function render()
     {
-        return view('livewire.show-tweets');
+        $tweets = Tweet::with('user')->get();
+        return view('livewire.show-tweets', compact('tweets'));
     }
 }
