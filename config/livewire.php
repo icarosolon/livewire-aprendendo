@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'asset_url' => 'http://localhost/liveware/public',
+    'asset_url' => null/* 'http://localhost/liveware/public' */,
 
     /*
     |--------------------------------------------------------------------------

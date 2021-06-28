@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\{
     ShowTweets
 };
+use App\Http\Livewire\User\UploadFoto;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +16,12 @@ use App\Http\Livewire\{
 |
 */
 
-Route::get('tweets', ShowTweets::class)->middleware('auth');
+Route::get('/upload', UploadFoto::class)
+    ->name('upload.foto.user')
+    ->middleware('auth');
+Route::get('/tweets', ShowTweets::class)
+    ->name('tweets.index')
+    ->middleware('auth');
 
 Route::get('/', function () {
     return view('welcome');
