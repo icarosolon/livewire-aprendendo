@@ -1,8 +1,8 @@
 <div>
     <div class="container ">
+        <h1>Show Tweets</h1>
         <div class="d-flex justify-content-center">
-            Show Tweets
-            <p>{{ $content }}</p>
+                <p>{{ $content }}</p>
             <form action="" method="post" wire:submit.prevent="create">
                 <input type="text"
                 name="content"
